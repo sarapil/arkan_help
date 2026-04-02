@@ -1,0 +1,62 @@
+/* Arkan Help — Design Tokens / CSS Variables
+ * Brand color palette and design system tokens.
+ * Prefix: --ah-
+ */
+
+:root {
+  /* Primary */
+  --ah-primary: #10B981;
+  --ah-primary-light: #10B98122;
+  --ah-primary-dark: #10B981DD;
+
+  /* Secondary & Accent */
+  --ah-secondary: #64748B;
+  --ah-accent: #10B981;
+
+  /* Semantic */
+  --ah-success: #10B981;
+  --ah-warning: #F59E0B;
+  --ah-danger: #EF4444;
+  --ah-info: #3B82F6;
+
+  /* Surfaces */
+  --ah-bg: #FFFFFF;
+  --ah-bg-subtle: #F8FAFC;
+  --ah-text: #1E293B;
+  --ah-text-muted: #64748B;
+  --ah-border: #E2E8F0;
+
+  /* Spacing */
+  --ah-space-xs: 0.25rem;
+  --ah-space-sm: 0.5rem;
+  --ah-space-md: 1rem;
+  --ah-space-lg: 1.5rem;
+  --ah-space-xl: 2rem;
+
+  /* Border radius */
+  --ah-radius-sm: 0.375rem;
+  --ah-radius-md: 0.5rem;
+  --ah-radius-lg: 0.75rem;
+  --ah-radius-xl: 1rem;
+
+  /* Shadows */
+  --ah-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --ah-shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --ah-shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* Typography */
+  --ah-font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --ah-font-family-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --ah-bg: #0F172A;
+  --ah-bg-subtle: #1E293B;
+  --ah-text: #F1F5F9;
+  --ah-text-muted: #94A3B8;
+  --ah-border: #334155;
+  --ah-shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --ah-shadow-md: 0 4px 6px rgba(0,0,0,0.4);
+  --ah-shadow-lg: 0 10px 15px rgba(0,0,0,0.5);
+}

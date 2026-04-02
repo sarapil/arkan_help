@@ -1,0 +1,17 @@
+[
+  {
+    "name": "AH_manage_topics",
+    "category": "Module",
+    "description": "Manage help topics and content"
+  },
+  {
+    "name": "AH_manage_translations",
+    "category": "Action",
+    "description": "Manage help translations"
+  },
+  {
+    "name": "AH_view_analytics",
+    "category": "Report",
+    "description": "View help analytics"
+  }
+]

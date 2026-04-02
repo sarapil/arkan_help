@@ -1,0 +1,10 @@
+{
+  "_comment": "Test users for Arkan Help",
+  "users": [
+    {
+      "email": "test_arkan_help@example.com",
+      "first_name": "Test",
+      "roles": []
+    }
+  ]
+}

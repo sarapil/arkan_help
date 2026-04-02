@@ -70,3 +70,13 @@ caps_capabilities = [
     {"name": "AH_manage_translations", "category": "Action", "description": "Manage help translations"},
     {"name": "AH_view_analytics", "category": "Report", "description": "View help analytics"},
 ]
+
+app_icon = "/assets/arkan_help/images/arkan_help-logo.svg"
+app_color = "#10B981"
+app_logo_url = "/assets/arkan_help/images/arkan_help-logo.svg"
+
+after_install = "arkan_help.install.after_install"
+
+add_to_apps_screen = [
+    {"name": "arkan_help", "logo": "/assets/arkan_help/images/arkan_help-logo.svg", "title": "Arkan Help", "route": "/app/arkan-help", "has_permission": "arkan_help.has_app_permission"}
+]

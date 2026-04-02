@@ -1,0 +1,10 @@
+[
+  {
+    "role": "System Manager",
+    "capabilities": [
+      "AH_manage_topics",
+      "AH_manage_translations",
+      "AH_view_analytics"
+    ]
+  }
+]
