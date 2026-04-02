@@ -1,0 +1,120 @@
+/* Arkan Help — Theme CSS Variables
+ * Brand colors and design tokens for Arkan Help
+ * Domain: Help & Documentation System
+ */
+
+:root {
+  /* Primary Colors */
+  --arkan_help-primary: #10B981;
+  --arkan_help-primary-dark: #059669;
+  --arkan_help-primary-light: #10B98133;
+  --arkan_help-primary-subtle: #10B9810D;
+
+  /* Neutral Colors */
+  --arkan_help-bg: #FFFFFF;
+  --arkan_help-bg-subtle: #F8FAFC;
+  --arkan_help-text: #1E293B;
+  --arkan_help-text-muted: #64748B;
+  --arkan_help-border: #E2E8F0;
+
+  /* Status Colors */
+  --arkan_help-success: #10B981;
+  --arkan_help-warning: #F59E0B;
+  --arkan_help-danger: #EF4444;
+  --arkan_help-info: #3B82F6;
+
+  /* Spacing */
+  --arkan_help-radius-sm: 6px;
+  --arkan_help-radius-md: 10px;
+  --arkan_help-radius-lg: 16px;
+
+  /* Shadows */
+  --arkan_help-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --arkan_help-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --arkan_help-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --arkan_help-font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  --arkan_help-font-size-xs: 0.75rem;
+  --arkan_help-font-size-sm: 0.875rem;
+  --arkan_help-font-size-base: 1rem;
+  --arkan_help-font-size-lg: 1.125rem;
+  --arkan_help-font-size-xl: 1.25rem;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --arkan_help-bg: #0F172A;
+  --arkan_help-bg-subtle: #1E293B;
+  --arkan_help-text: #F1F5F9;
+  --arkan_help-text-muted: #94A3B8;
+  --arkan_help-border: #334155;
+  --arkan_help-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --arkan_help-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --arkan_help-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* RTL Support */
+[dir="rtl"] .arkan_help-sidebar {
+  border-inline-start: 2px solid var(--arkan_help-primary);
+  margin-inline-start: 0;
+  margin-inline-end: 1rem;
+}
+
+/* Glassmorphism Card */
+.arkan_help-glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--arkan_help-border);
+  border-radius: var(--arkan_help-radius-lg);
+  box-shadow: var(--arkan_help-shadow-md);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arkan_help-glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--arkan_help-shadow-lg);
+}
+
+[data-theme="dark"] .arkan_help-glass-card {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* Status Badge */
+.arkan_help-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: var(--arkan_help-font-size-xs);
+  font-weight: 600;
+}
+
+.arkan_help-badge--success { background: var(--arkan_help-success)1A; color: var(--arkan_help-success); }
+.arkan_help-badge--warning { background: var(--arkan_help-warning)1A; color: var(--arkan_help-warning); }
+.arkan_help-badge--danger { background: var(--arkan_help-danger)1A; color: var(--arkan_help-danger); }
+.arkan_help-badge--info { background: var(--arkan_help-info)1A; color: var(--arkan_help-info); }
+
+/* Workspace Header */
+.arkan_help-ws-header {
+  background: linear-gradient(135deg, var(--arkan_help-primary), var(--arkan_help-primary-dark));
+  color: white;
+  padding: 2rem;
+  border-radius: var(--arkan_help-radius-lg);
+  margin-bottom: 1.5rem;
+}
+
+.arkan_help-ws-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.arkan_help-ws-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+  font-size: var(--arkan_help-font-size-sm);
+}

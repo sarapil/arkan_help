@@ -19,6 +19,7 @@ app_include_js = [
 ]
 
 app_include_css = [
+        "/assets/arkan_help/css/arkan_help-theme.css",
 	"/assets/arkan_help/css/help.css",
 ]
 
@@ -79,4 +80,10 @@ after_install = "arkan_help.install.after_install"
 
 add_to_apps_screen = [
     {"name": "arkan_help", "logo": "/assets/arkan_help/images/arkan_help-logo.svg", "title": "Arkan Help", "route": "/app/arkan-help", "has_permission": "arkan_help.has_app_permission"}
+]
+
+# Website Route Rules
+# --------------------------------------------------------
+website_route_rules = [
+    {"from_route": "/arkan-help/<path:app_path>", "to_route": "arkan-help/<app_path>"},
 ]
