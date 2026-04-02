@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-20 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "main_section",
+  "topic",
+  "doctype_link",
+  "fieldname",
+  "column_break_main",
+  "view_type",
+  "action",
+  "rules_section",
+  "role",
+  "priority"
+ ],
+ "fields": [
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break",
+   "label": "Help Context"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Topic",
+   "options": "Help Topic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctype_link",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "label": "Fieldname",
+   "description": "Specific field within the DocType",
+   "depends_on": "eval:doc.doctype_link"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "view_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "View Type",
+   "options": "\nform\nlist\nreport\npage"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action",
+   "options": "\ncreate\nedit\nview\nany",
+   "default": "any"
+  },
+  {
+   "fieldname": "rules_section",
+   "fieldtype": "Section Break",
+   "label": "Matching Rules"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role",
+   "description": "If set, this context only matches for users with this role"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "default": "0",
+   "label": "Priority",
+   "description": "Higher value = shown first when multiple contexts match"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-20 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Arkan Help",
+ "name": "Help Context",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "priority",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:topic_key",
+ "creation": "2026-03-20 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "main_section",
+  "topic_key",
+  "title",
+  "column_break_main",
+  "app_name",
+  "enabled",
+  "context_section",
+  "context_type",
+  "context_reference",
+  "column_break_ctx",
+  "icon",
+  "sort_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break",
+   "label": "Help Topic"
+  },
+  {
+   "fieldname": "topic_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Topic Key",
+   "reqd": 1,
+   "unique": 1,
+   "description": "Machine-readable key, e.g. sales_order_create"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "app_name",
+   "fieldtype": "Link",
+   "label": "App Name",
+   "options": "Module Def",
+   "description": "Which app / module this topic belongs to"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "default": "1",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "context_section",
+   "fieldtype": "Section Break",
+   "label": "Context"
+  },
+  {
+   "fieldname": "context_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Context Type",
+   "options": "\ndoctype\npage\nreport\ngeneral"
+  },
+  {
+   "fieldname": "context_reference",
+   "fieldtype": "Data",
+   "label": "Context Reference",
+   "description": "Reference name matching context type (e.g. DocType name, page route)"
+  },
+  {
+   "fieldname": "column_break_ctx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon",
+   "description": "Icon class for display, e.g. help-circle"
+  },
+  {
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "default": "0",
+   "label": "Sort Order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-20 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Arkan Help",
+ "name": "Help Topic",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "sort_order",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

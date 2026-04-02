@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "creation": "2026-03-20 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "language_section",
+  "default_language",
+  "fallback_language",
+  "features_section",
+  "enable_field_help",
+  "enable_navbar_help",
+  "enable_form_help",
+  "column_break_features",
+  "enable_file_based_help",
+  "analytics_enabled",
+  "display_section",
+  "help_icon",
+  "modal_width",
+  "column_break_display",
+  "cache_ttl"
+ ],
+ "fields": [
+  {
+   "fieldname": "language_section",
+   "fieldtype": "Section Break",
+   "label": "Language Settings"
+  },
+  {
+   "fieldname": "default_language",
+   "fieldtype": "Link",
+   "label": "Default Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "fallback_language",
+   "fieldtype": "Link",
+   "label": "Fallback Language",
+   "options": "Language",
+   "default": "en",
+   "description": "Used when content is not available in the user's language"
+  },
+  {
+   "fieldname": "features_section",
+   "fieldtype": "Section Break",
+   "label": "Feature Toggles"
+  },
+  {
+   "fieldname": "enable_field_help",
+   "fieldtype": "Check",
+   "label": "Enable Field Help",
+   "description": "Show \u24d8 icons next to fields that have help content",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_navbar_help",
+   "fieldtype": "Check",
+   "label": "Enable Navbar Help",
+   "description": "Show help link in the navigation bar",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_form_help",
+   "fieldtype": "Check",
+   "label": "Enable Form Help",
+   "description": "Show a help banner on forms when help content is available",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_features",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enable_file_based_help",
+   "fieldtype": "Check",
+   "label": "Enable File-Based Help",
+   "description": "Load help content from {app}/help/{lang}/ directories",
+   "default": "0"
+  },
+  {
+   "fieldname": "analytics_enabled",
+   "fieldtype": "Check",
+   "label": "Analytics Enabled",
+   "description": "Track help content usage for insights",
+   "default": "0"
+  },
+  {
+   "fieldname": "display_section",
+   "fieldtype": "Section Break",
+   "label": "Display Settings"
+  },
+  {
+   "fieldname": "help_icon",
+   "fieldtype": "Data",
+   "label": "Help Icon",
+   "default": "help-circle",
+   "description": "Icon class used for help indicators"
+  },
+  {
+   "fieldname": "modal_width",
+   "fieldtype": "Select",
+   "label": "Modal Width",
+   "options": "sm\nmd\nlg\nxl",
+   "default": "md"
+  },
+  {
+   "fieldname": "column_break_display",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cache_ttl",
+   "fieldtype": "Int",
+   "label": "Cache TTL (seconds)",
+   "default": "3600",
+   "description": "How long to cache help content. Set to 0 to disable caching."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-20 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Arkan Help",
+ "name": "Help Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
