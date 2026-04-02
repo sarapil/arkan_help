@@ -62,3 +62,11 @@ after_migrate = ["arkan_help.arkan_help.seed.seed_data"]
 # Uses the same doc_events hook (handled inside on_help_doc_change).
 # For a full manual sync run:
 #   bench execute arkan_help.arkan_help.utils.translation.sync_with_frappe
+
+# CAPS Integration — Capability-Based Access Control
+# ------------------------------------------------------------
+caps_capabilities = [
+    {"name": "AH_manage_topics", "category": "Module", "description": "Manage help topics and content"},
+    {"name": "AH_manage_translations", "category": "Action", "description": "Manage help translations"},
+    {"name": "AH_view_analytics", "category": "Report", "description": "View help analytics"},
+]

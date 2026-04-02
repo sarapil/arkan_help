@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="white"/>
+  <rect x="320" y="80" width="160" height="160" rx="32" fill="#10B981"/>
+  <g transform="translate(356,116) scale(3.67)">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" fill="white"/>
+  </g>
+  <text x="400" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="40" fill="#10B981">Arkan Help</text>
+  <text x="400" y="350" text-anchor="middle" font-family="Inter,sans-serif" font-weight="400" font-size="16" fill="#94A3B8">by Arkan Lab</text>
+  <style>
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    text { animation: fadeIn 1s ease-in; }
+  </style>
+</svg>

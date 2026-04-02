@@ -1,0 +1,31 @@
+"""
+Arkan Help — TopicService
+Help topic CRUD, search, translations.
+"""
+
+import frappe
+from frappe import _
+
+
+class TopicService:
+    """Help topic CRUD, search, translations."""
+
+    @staticmethod
+    def get_list(**filters):
+        """Return filtered list of records."""
+        raise NotImplementedError
+
+    @staticmethod
+    def get_detail(name: str) -> dict:
+        """Return single record detail."""
+        raise NotImplementedError
+
+    @staticmethod
+    def create(**kwargs) -> str:
+        """Create new record. Returns document name."""
+        raise NotImplementedError
+
+    @staticmethod
+    def update(name: str, **kwargs) -> None:
+        """Update existing record."""
+        raise NotImplementedError
