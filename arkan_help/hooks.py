@@ -53,7 +53,7 @@ doc_events = {
 # ---------------------------------------------------------------------------
 
 # ─── Post-Migration Seed ───
-after_migrate = ["arkan_help.arkan_help.seed.seed_data"]
+after_migrate = ["arkan_help.seed.seed_data"]
 
 # Translation — auto-sync Frappe CSV on Help Content changes
 # ---------------------------------------------------------------------------
