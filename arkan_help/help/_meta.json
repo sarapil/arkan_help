@@ -1,0 +1,12 @@
+{
+  "app": "arkan_help",
+  "name": "Arkan Help",
+  "icon": "help-circle",
+  "color": "#16A085",
+  "languages": [
+    "en",
+    "ar"
+  ],
+  "default_language": "en",
+  "fallback_language": "en"
+}

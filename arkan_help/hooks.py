@@ -5,7 +5,7 @@ app_description = "Contextual Help System for Frappe"
 app_email = "ahmedshaheen@example.com"
 app_license = "mit"
 
-required_apps = ["frappe"]
+required_apps = ["frappe", "frappe_visual"]
 
 # Fixtures — export default Help Settings on bench export-fixtures
 fixtures = [
