@@ -1,7 +1,12 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 app_name = "arkan_help"
 app_title = "Arkan Help"
 app_publisher = "Arkan"
-app_description = "Contextual Help System for Frappe"
+app_description = "Contextual help system with guided tutorials for Frappe"
 app_email = "ahmedshaheen@example.com"
 app_license = "mit"
 
@@ -21,6 +26,7 @@ app_include_js = [
 	# Frappe Visual — UI component library
 	"/assets/frappe_visual/js/fv_bootstrap.js",
 	"/assets/frappe_visual/js/icon_helper.js",
+    "/assets/arkan_help/js/fv_integration.js",
 ]
 
 app_include_css = [

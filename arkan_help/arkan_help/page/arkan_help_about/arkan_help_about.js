@@ -1,19 +1,102 @@
+// Copyright (c) 2024, Arkan Lab — https://arkan.it.com
+// License: MIT
+
 frappe.pages["arkan-help-about"].on_page_load = function(wrapper) {
-    const page = frappe.ui.make_app_page({ parent: wrapper, title: __("About Arkan Help"), single_column: true });
-    $(page.body).html('<div id="arkan_help_about-root"></div>');
-    _render_arkan_help_about(page);
+    const page = frappe.ui.make_app_page({
+        parent: wrapper,
+        title: __("About Arkan Help"),
+        single_column: true,
+    });
+
+    page.main.addClass("arkan-help-about-page");
+    const $container = $('<div class="fv-about-container"></div>').appendTo(page.main);
+
+    // Use frappe.visual.generator for premium rendering
+    const renderWithGenerator = async () => {
+        try {
+            await frappe.visual.generator.aboutPage(
+                $container[0],
+                "arkan_help",
+                {
+                    color: "#10B981",
+                    mainDoctype: "Help Topic",
+                    features: [
+        {
+                "icon": "help-circle",
+                "title": "Contextual Help",
+                "description": "6-level specificity ladder \u2014 exact field+role match to fallback language."
+        },
+        {
+                "icon": "file-text",
+                "title": "File-Based Help",
+                "description": "Markdown help files per DocType with field-level anchors."
+        },
+        {
+                "icon": "info-circle",
+                "title": "Field Help Icons",
+                "description": "\u24d8 icons on form fields with inline help tooltips."
+        },
+        {
+                "icon": "compass",
+                "title": "Navbar Help",
+                "description": "\u2753 icon in navbar for page-level contextual help."
+        },
+        {
+                "icon": "language",
+                "title": "Multilingual",
+                "description": "Arabic + English with automatic fallback resolution."
+        },
+        {
+                "icon": "layout-dashboard",
+                "title": "Help Dashboard",
+                "description": "Track help coverage, views, and missing content."
+        }
+],
+                    roles: [
+        {
+                "name": "Help Author",
+                "icon": "edit",
+                "description": "Create and edit help content for all DocTypes."
+        },
+        {
+                "name": "Help Admin",
+                "icon": "shield-check",
+                "description": "Configure help settings and manage help coverage."
+        }
+],
+                    ctas: [
+                        { label: __("Start Onboarding"), route: "arkan-help-onboarding", primary: true },
+                        { label: __("Open Settings"), route: "app/help-settings" },
+                    ],
+                }
+            );
+        } catch(e) {
+            console.warn("Generator failed, using fallback:", e);
+            renderFallback($container);
+        }
+    };
+
+    const renderFallback = ($el) => {
+        $el.html(`
+            <div style="text-align:center;padding:60px 20px">
+                <h1 style="font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,#10B981,#333);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${__("Arkan Help")}</h1>
+                <p style="font-size:1.15rem;color:var(--text-muted);max-width:600px;margin:16px auto">${__("6-level specificity ladder — exact field+role match to fallback language.")}</p>
+                <div style="margin-top:24px">
+                    <a href="/app/arkan-help-onboarding" class="btn btn-primary btn-lg">${__("Start Onboarding")}</a>
+                </div>
+            </div>
+        `);
+    };
+
+    if (frappe.visual && frappe.visual.generator) {
+        renderWithGenerator();
+    } else {
+        frappe.require("frappe_visual.bundle.js", () => {
+            if (frappe.visual && frappe.visual.generator) {
+                renderWithGenerator();
+            } else {
+                renderFallback($container);
+            }
+        });
+    }
 };
-function _render_arkan_help_about(page) {
-    const B = "#06B6D4", BL = "#CFFAFE", BD = "#0E7490";
-    const slides = [
-        { title: __("What is Arkan Help?"), icon: "help-circle", content: `<div class="ab-card"><div class="ab-hero"><svg viewBox="0 0 120 120" width="100" height="100"><circle cx="60" cy="60" r="55" fill="${BL}" stroke="${B}" stroke-width="3"><animate attributeName="r" values="52;55;52" dur="3s" repeatCount="indefinite"/></circle><text x="60" y="68" text-anchor="middle" font-size="36" fill="${BD}" font-weight="bold">❓</text></svg></div><h3>${__("Arkan Help")}</h3><p>${__("Contextual Help & Self-Documentation System")}</p><div class="ab-chips"><div class="ab-chip"><span>❓</span> ${__("File-Based Help")}</div>\n<div class="ab-chip"><span>❓</span> ${__("Field Help Icons")}</div>\n<div class="ab-chip"><span>❓</span> ${__("Navbar Help")}</div>\n<div class="ab-chip"><span>❓</span> ${__("Role Guides")}</div>\n<div class="ab-chip"><span>❓</span> ${__("6-Level Resolution")}</div>\n<div class="ab-chip"><span>❓</span> ${__("RTL Support")}</div>\n<div class="ab-chip"><span>❓</span> ${__("Multi-Language")}</div></div></div>` },
-        { title: __("Module Map"), icon: "sitemap", content: `<div class="ab-card"><p class="text-muted mb-3">${__("Interactive map of all modules.")}</p><div id="ab-appmap" style="min-height:420px;border:1px solid var(--border-color);border-radius:12px"></div></div>`, onShow() { if(frappe.visual&&frappe.visual.appMap) frappe.visual.appMap({container:"#ab-appmap",app:"arkan_help",interactive:true}); else $("#ab-appmap").html('<p class="text-muted text-center p-5">'+__("Install frappe_visual.")+"</p>"); } },
-        { title: __("Entity Relationships"), icon: "hierarchy-3", content: `<div class="ab-card"><div id="ab-erd" style="min-height:420px;border:1px solid var(--border-color);border-radius:12px"></div></div>`, onShow() { if(frappe.visual&&frappe.visual.RelationshipExplorer) frappe.visual.RelationshipExplorer.create({container:"#ab-erd",app:"arkan_help"}); else $("#ab-erd").html('<p class="text-muted text-center p-5">'+__("Install frappe_visual.")+"</p>"); } },
-        { title: __("Integration Map"), icon: "plug-connected", content: `<div class="ab-card"><h3>${__("How Arkan Help Connects")}</h3><p>${__("Integrates with ERPNext, HRMS, CAPS, Frappe Visual, and Arkan Help.")}</p><div class="ab-grid"><div class="ab-int">🔗 ERPNext</div><div class="ab-int">👥 HRMS</div><div class="ab-int">🛡️ CAPS</div><div class="ab-int">👁️ Visual</div><div class="ab-int">❓ Help</div></div></div>` },
-        { title: __("Security & Permissions"), icon: "shield-check", content: `<div class="ab-card"><h3>${__("CAPS-Integrated Security")}</h3><p>${__("Fine-grained capability-based access control.")}</p><div class="ab-chips"><div class="ab-chip">🔑 ${__("Capabilities")}</div><div class="ab-chip">🔒 ${__("Field Masking")}</div><div class="ab-chip">⚡ ${__("Action Gates")}</div><div class="ab-chip">📋 ${__("Policies")}</div></div></div>` },
-        { title: __("Getting Started"), icon: "rocket", content: `<div class="ab-card"><h3>${__("Quick Start")}</h3><p>${__("Follow the onboarding wizard for a guided tour.")}</p><div style="text-align:center;margin-top:20px"><button class="btn btn-primary btn-lg" onclick="frappe.set_route('arkan-help-onboarding')">${__("Start Onboarding")}</button></div></div>` },
-    ];
-    if(frappe.visual&&frappe.visual.Storyboard) { frappe.visual.Storyboard.create({container:page.body,slides,brand_color:B,navigation:"both"}); }
-    else { let h='<div style="max-width:900px;margin:0 auto;padding:20px">'; slides.forEach((s,i)=>{h+=`<div style="margin-bottom:24px;padding:20px;border:1px solid var(--border-color);border-radius:12px"><h2 style="color:${B}">${s.title}</h2>${s.content}</div>`}); h+="</div>"; $(page.body).find("#arkan_help_about-root").html(h); setTimeout(()=>slides.forEach(s=>{if(s.onShow)s.onShow()}),300); }
-}
-frappe.dom.set_style(`.ab-card{padding:24px;text-align:center}.ab-hero{margin-bottom:16px}.ab-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}.ab-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:var(--bg-light-gray,#f5f5f5);font-size:13px;border:1px solid var(--border-color)}.ab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:16px}.ab-int{padding:12px;border-radius:8px;background:var(--bg-light-gray,#f5f5f5);text-align:center;border:1px solid var(--border-color)}`);

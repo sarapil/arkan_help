@@ -1,19 +1,96 @@
-frappe.pages["arkan-help-onboarding"].on_page_load = async function(wrapper) {
-    const page = frappe.ui.make_app_page({ parent: wrapper, title: __("Arkan Help Onboarding"), single_column: true });
-    page.set_secondary_action(__("Skip"), () => frappe.set_route("app"));
-    const $c = $(page.body).html('<div id="arkan_help_onboarding-container"></div>').find("#arkan_help_onboarding-container");
-    const B = "#06B6D4", BL = "#CFFAFE";
+// Copyright (c) 2024, Arkan Lab — https://arkan.it.com
+// License: MIT
+
+frappe.pages["arkan-help-onboarding"].on_page_load = function(wrapper) {
+    const page = frappe.ui.make_app_page({
+        parent: wrapper,
+        title: __("Arkan Help Onboarding"),
+        single_column: true,
+    });
+
+    page.main.addClass("arkan-help-onboarding-page");
+    const $container = $('<div class="fv-onboarding-container"></div>').appendTo(page.main);
+
     const steps = [
-        { title: __("Welcome to Arkan Help"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="60" r="55" fill="${BL}" stroke="${B}" stroke-width="3"><animate attributeName="r" values="52;55;52" dur="3s" repeatCount="indefinite"/></circle><text x="60" y="68" text-anchor="middle" font-size="36" font-weight="bold">❓</text></svg><h3 style="color:${B};margin-top:16px">${__("Arkan Help")}</h3><p style="max-width:500px;margin:12px auto">${__("Contextual Help & Self-Documentation System")}</p></div>`; } },
-        { title: __("File-Based Help"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("File-Based Help")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use File-Based Help in Arkan Help.")}</p></div>`; } },
-        { title: __("Field Help Icons"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("Field Help Icons")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Field Help Icons in Arkan Help.")}</p></div>`; } },
-        { title: __("Navbar Help"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("Navbar Help")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Navbar Help in Arkan Help.")}</p></div>`; } },
-        { title: __("Role Guides"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("Role Guides")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Role Guides in Arkan Help.")}</p></div>`; } },
-        { title: __("6-Level Resolution"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("6-Level Resolution")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use 6-Level Resolution in Arkan Help.")}</p></div>`; } },
-        { title: __("RTL Support"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("RTL Support")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use RTL Support in Arkan Help.")}</p></div>`; } },
-        { title: __("Multi-Language"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">❓</span><h3 style="color:${B};margin-top:12px">${__("Multi-Language")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Multi-Language in Arkan Help.")}</p></div>`; } },
-        { title: __("You are Ready!"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:4em">🎉</span><h3 style="color:${B};margin-top:16px">${__("Onboarding Complete!")}</h3><p style="max-width:500px;margin:12px auto">${__("You are now ready to use Arkan Help. Use ❓ for help.")}</p><div style="margin-top:20px"><button class="btn btn-primary btn-lg" onclick="frappe.set_route('app')">${__("Go to Desk")}</button></div></div>`; } },
-    ];
-    if(frappe.visual&&frappe.visual.Storyboard) frappe.visual.Storyboard.create({container:$c[0],steps,brand_color:B,navigation:"both",showProgress:true});
-    else { let h='<div style="max-width:800px;margin:0 auto;padding:20px">'; steps.forEach((s,i)=>{const d=document.createElement("div");if(s.content)s.content(d);h+=`<div style="margin-bottom:24px;padding:20px;border:1px solid var(--border-color);border-radius:12px"><h2 style="color:${B}">${s.title}</h2>${d.innerHTML||""}</div>`}); h+="</div>"; $c.html(h); }
+        {
+                "title": "Enable Help Settings",
+                "description": "Activate field help, navbar help, and file-based help in Help Settings.",
+                "icon": "settings"
+        },
+        {
+                "title": "App Structure",
+                "description": "See Arkan Help modules.",
+                "icon": "sitemap",
+                "component": "app-map"
+        },
+        {
+                "title": "Create Help Topics",
+                "description": "Write help content for your DocTypes using the Help Topic form.",
+                "icon": "file-text"
+        },
+        {
+                "title": "Data Model",
+                "description": "How Help Topics, Content, and Contexts relate.",
+                "icon": "hierarchy-2",
+                "component": "erd",
+                "doctype": "Help Topic"
+        },
+        {
+                "title": "File-Based Help",
+                "description": "Create markdown files in app/help/en/ and app/help/ar/ directories.",
+                "icon": "markdown"
+        },
+        {
+                "title": "Verify Integration",
+                "description": "Check that \u24d8 icons appear on forms and \u2753 works in navbar.",
+                "icon": "rocket"
+        }
+];
+
+    // Use frappe.visual.generator for premium wizard rendering
+    const renderWithGenerator = () => {
+        try {
+            frappe.visual.generator.onboardingWizard(
+                $container[0],
+                "Arkan Help",
+                steps.map(s => ({
+                    ...s,
+                    onComplete: s.title.includes("rocket") || s.title.includes("Ready") || s.title.includes("Go Live") || s.title.includes("Start")
+                        ? () => frappe.set_route("app")
+                        : undefined,
+                }))
+            );
+        } catch(e) {
+            console.warn("Generator failed, using fallback:", e);
+            renderFallback($container, steps);
+        }
+    };
+
+    const renderFallback = ($el, steps) => {
+        const stepsHtml = steps.map((s, i) => `
+            <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--border-color)">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(99,102,241,0.1);color:#10B981;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">${i+1}</div>
+                <div><h3 style="font-size:1rem;font-weight:600;margin-bottom:4px">${__(s.title)}</h3><p style="font-size:0.9rem;color:var(--text-muted)">${__(s.description)}</p></div>
+            </div>
+        `).join('');
+        $el.html(`
+            <div style="text-align:center;padding:60px 20px">
+                <h1>🚀 ${__("Get Started with Arkan Help")}</h1>
+                <p style="color:var(--text-muted)">${__("Follow these steps to set up and master Arkan Help.")}</p>
+            </div>
+            <div style="max-width:700px;margin:0 auto;padding:0 20px">${stepsHtml}</div>
+        `);
+    };
+
+    if (frappe.visual && frappe.visual.generator) {
+        renderWithGenerator();
+    } else {
+        frappe.require("frappe_visual.bundle.js", () => {
+            if (frappe.visual && frappe.visual.generator) {
+                renderWithGenerator();
+            } else {
+                renderFallback($container, steps);
+            }
+        });
+    }
 };
