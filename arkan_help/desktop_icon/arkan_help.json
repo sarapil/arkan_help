@@ -5,7 +5,9 @@
   "label": "Arkan Help",
   "link": "/app/arkan-help",
   "link_type": "External",
-  "logo_url": "/assets/arkan_help/images/logo.svg",
+  "logo_url": "/assets/arkan_help/images/arkan_help-logo.svg",
   "standard": 1,
-  "hidden": 0
+  "hidden": 0,
+  "bg_color": "#10B981",
+  "name": "Arkan Help"
 }

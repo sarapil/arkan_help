@@ -1,0 +1,157 @@
+{
+  "app": "arkan_help",
+  "charts": [],
+  "content": "[{\"id\": \"hdr1\", \"type\": \"header\", \"data\": {\"text\": \"<span class='text-lg'>Arkan Help \\u2014 Contextual Help & Self-Documentation System</span>\", \"col\": 12}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"About Arkan Help\", \"col\": 4}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Onboarding\", \"col\": 4}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Help Topic\", \"col\": 4}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Help Content\", \"col\": 4}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Help Context\", \"col\": 4}}, {\"id\": \"sc6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Help Settings\", \"col\": 4}}]",
+  "creation": "2026-04-04 00:00:00",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "help-circle",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Arkan Help",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Pages & Tools",
+      "link_count": 0,
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "About Arkan Help",
+      "link_count": 0,
+      "link_to": "arkan-help-about",
+      "link_type": "Page",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Onboarding",
+      "link_count": 0,
+      "link_to": "arkan-help-onboarding",
+      "link_type": "Page",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Configuration",
+      "link_count": 0,
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Help Topic",
+      "link_count": 0,
+      "link_to": "Help Topic",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Help Content",
+      "link_count": 0,
+      "link_to": "Help Content",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Help Context",
+      "link_count": 0,
+      "link_to": "Help Context",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Help Settings",
+      "link_count": 0,
+      "link_to": "Help Settings",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "modified": "2026-04-04 00:00:00",
+  "modified_by": "Administrator",
+  "module": "Arkan Help",
+  "name": "Arkan Help",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 1,
+  "shortcuts": [
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "About Arkan Help",
+      "link_to": "arkan-help-about",
+      "stats_filter": "",
+      "type": "Page"
+    },
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "Onboarding",
+      "link_to": "arkan-help-onboarding",
+      "stats_filter": "",
+      "type": "Page"
+    },
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "Help Topic",
+      "link_to": "Help Topic",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "Help Content",
+      "link_to": "Help Content",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "Help Context",
+      "link_to": "Help Context",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#6366F1",
+      "doc_view": "",
+      "label": "Help Settings",
+      "link_to": "Help Settings",
+      "stats_filter": "",
+      "type": "DocType"
+    }
+  ],
+  "title": "Arkan Help"
+}
