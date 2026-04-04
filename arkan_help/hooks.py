@@ -10,16 +10,21 @@ required_apps = ["frappe", "frappe_visual"]
 # Fixtures — export default Help Settings on bench export-fixtures
 fixtures = [
 	{"dt": "Help Settings"},
+	{"dt": "Desktop Icon", "filters": [["app", "=", "arkan_help"]]},
+	{"dt": "Workspace", "filters": [["module", "like", "Arkan Help%"]]},
 ]
 
 app_include_js = [
 	"/assets/arkan_help/js/help_widget.js",
 	"/assets/arkan_help/js/field_help.js",
 	"/assets/arkan_help/js/navbar_help.js",
+	# Frappe Visual — UI component library
+	"/assets/frappe_visual/js/fv_bootstrap.js",
+	"/assets/frappe_visual/js/icon_helper.js",
 ]
 
 app_include_css = [
-        "/assets/arkan_help/css/arkan_help-theme.css",
+	"/assets/arkan_help/css/arkan_help-theme.css",
 	"/assets/arkan_help/css/help.css",
 ]
 

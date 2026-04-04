@@ -1,0 +1,11 @@
+{
+  "app": "arkan_help",
+  "doctype": "Desktop Icon",
+  "icon_type": "App",
+  "label": "Arkan Help",
+  "link": "/app/arkan-help",
+  "link_type": "External",
+  "logo_url": "/assets/arkan_help/images/logo.svg",
+  "standard": 1,
+  "hidden": 0
+}
