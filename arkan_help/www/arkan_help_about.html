@@ -1,0 +1,56 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("About Arkan Help") }}{% endblock %}
+
+{% block page_content %}
+<div id="arkan-help-about-container" data-page="arkan-help-about"></div>
+
+<style>
+  :root { --ah-primary: #10B981; --ah-gradient: linear-gradient(135deg, #10B981, #059669); }
+  #arkan-help-about-container { min-height: 80vh; padding: 24px 0; }
+  .ah-about-hero { text-align: center; padding: 60px 20px; }
+  .ah-about-hero img { width: 140px; height: 140px; margin-bottom: 24px; }
+  .ah-about-hero h1 { font-size: 2.5rem; font-weight: 800; background: var(--ah-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+  .ah-about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+  .ah-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+  .ah-feature-card { padding: 28px; border-radius: 16px; background: var(--card-bg); border: 1px solid var(--border-color); transition: transform 0.2s; }
+  .ah-feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12); }
+  .ah-feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+  .ah-feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+  .ah-footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('arkan-help-about-container');
+  container.innerHTML = `
+    <div class="ah-about-hero">
+      <img src="/assets/arkan_help/images/arkan_help-logo.svg" alt="Arkan Help" onerror="this.style.display='none'">
+      <h1>${__("Arkan Help")}</h1>
+      <p>${__("Contextual Help System — File-based help content, field-level tooltips, navbar help integration, and 6-level specificity resolution engine.")}</p>
+    </div>
+    <div class="ah-features">
+      <div class="ah-feature-card">
+        <h3>❓ ${__("Contextual Help")}</h3>
+        <p>${__("Navbar help icon, form toolbar help, and field-level ⓘ icons that open contextual help content for any DocType or field.")}</p>
+      </div>
+      <div class="ah-feature-card">
+        <h3>📁 ${__("File-Based Help")}</h3>
+        <p>${__("Markdown-based help files organized per app, per DocType, per language. Easy to author and maintain alongside code.")}</p>
+      </div>
+      <div class="ah-feature-card">
+        <h3>🎯 ${__("6-Level Resolution")}</h3>
+        <p>${__("Smart help lookup: exact field+role match → field match → DocType+role → DocType → file-based → fallback language. Always finds the best help.")}</p>
+      </div>
+      <div class="ah-feature-card">
+        <h3>🌐 ${__("Multi-Language")}</h3>
+        <p>${__("Full Arabic + English support with RTL awareness. Help content served in the user's preferred language with automatic fallback.")}</p>
+      </div>
+    </div>
+    <div class="ah-footer">
+      <p>${__("Built by")} <strong>Arkan Lab</strong> • ${__("Powered by")} <strong>Frappe Framework</strong></p>
+    </div>
+  `;
+});
+</script>
+{% endblock %}

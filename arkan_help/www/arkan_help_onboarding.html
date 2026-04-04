@@ -1,0 +1,49 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("Arkan Help Onboarding") }}{% endblock %}
+
+{% block page_content %}
+<div id="arkan-help-onboarding-container" data-page="arkan-help-onboarding"></div>
+
+<style>
+  #arkan-help-onboarding-container { min-height: 80vh; padding: 24px 0; }
+  .ah-onboard-hero { text-align: center; padding: 60px 20px; }
+  .ah-onboard-hero h1 { font-size: 2rem; font-weight: 700; color: var(--text-color); margin-bottom: 16px; }
+  .ah-onboard-hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 32px; }
+  .ah-onboard-steps { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+  .ah-step { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+  .ah-step-num { width: 40px; height: 40px; border-radius: 50%; background: rgba(139, 92, 246, 0.1); color: #8B5CF6; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .ah-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .ah-step p { font-size: 0.9rem; color: var(--text-muted); }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('arkan-help-onboarding-container');
+  const steps = [
+    { title: __("Enable Help Settings"), desc: __("Go to Help Settings and enable field_help, navbar_help, form_help, and file_based_help.") },
+    { title: __("Create Help Topics"), desc: __("Add Help Topic documents for each DocType that needs contextual assistance.") },
+    { title: __("Author File-Based Help"), desc: __("Create markdown files in your app's help/en/ and help/ar/ directories with frontmatter metadata.") },
+    { title: __("Test Navbar Help"), desc: __("Navigate to any form and click the ❓ icon in the navbar to verify help loads correctly.") },
+    { title: __("Verify Field Icons"), desc: __("Open a form and check that ⓘ icons appear on fields with help content.") },
+  ];
+  container.innerHTML = `
+    <div class="ah-onboard-hero">
+      <h1>🚀 ${__("Get Started with Arkan Help")}</h1>
+      <p>${__("Follow these steps to set up contextual help for your apps.")}</p>
+    </div>
+    <div class="ah-onboard-steps">
+      ${steps.map((s, i) => `
+        <div class="ah-step">
+          <div class="ah-step-num">${i + 1}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+});
+</script>
+{% endblock %}

@@ -90,5 +90,8 @@ add_to_apps_screen = [
 # Website Route Rules
 # --------------------------------------------------------
 website_route_rules = [
+    {"from_route": "/arkan-help-about", "to_route": "arkan_help_about"},
+    {"from_route": "/arkan-help-onboarding", "to_route": "arkan_help_onboarding"},
+    {"from_route": "/عن-arkan-help", "to_route": "arkan_help_about"},
     {"from_route": "/arkan-help/<path:app_path>", "to_route": "arkan-help/<app_path>"},
 ]
