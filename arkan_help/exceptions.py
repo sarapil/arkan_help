@@ -5,7 +5,7 @@
 
 """
 Arkan Help — Custom Exception Hierarchy
-مساعدة أركان
+Arkan Help Exceptions
 """
 
 import frappe
