@@ -8,7 +8,7 @@
     // App branding registration
     const APP_CONFIG = {
         name: "arkan_help",
-        title: __("Arkan Help"),
+        title: "Arkan Help",
         color: "#10B981",
         module: "Arkan Help",
     };
