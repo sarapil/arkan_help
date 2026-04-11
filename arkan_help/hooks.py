@@ -19,20 +19,9 @@ fixtures = [
 	{"dt": "Workspace", "filters": [["module", "like", "Arkan Help%"]]},
 ]
 
-app_include_js = [
-	"/assets/arkan_help/js/help_widget.js",
-	"/assets/arkan_help/js/field_help.js",
-	"/assets/arkan_help/js/navbar_help.js",
-	# Frappe Visual — UI component library
-	"/assets/frappe_visual/js/fv_bootstrap.js",
-	"/assets/frappe_visual/js/icon_helper.js",
-    "/assets/arkan_help/js/fv_integration.js",
-]
+app_include_js = ["/assets/arkan_help/js/arkan_help_combined.js"]
 
-app_include_css = [
-	"/assets/arkan_help/css/arkan_help-theme.css",
-	"/assets/arkan_help/css/help.css",
-]
+app_include_css = ["/assets/arkan_help/css/arkan_help_combined.css"]
 
 # Pass Help Settings to the client via frappe.boot
 extend_bootinfo = "arkan_help.arkan_help.boot.extend_bootinfo"
