@@ -19,9 +19,9 @@ fixtures = [
 	{"dt": "Workspace", "filters": [["module", "like", "Arkan Help%"]]},
 ]
 
-app_include_js = ["/assets/arkan_help/js/arkan_help_combined.js"]
+# MEGA: app_include_js = ["/assets/arkan_help/js/arkan_help_combined.js"]
 
-app_include_css = ["/assets/arkan_help/css/arkan_help_combined.css"]
+# MEGA: app_include_css = ["/assets/arkan_help/css/arkan_help_combined.css"]
 
 # Pass Help Settings to the client via frappe.boot
 extend_bootinfo = "arkan_help.arkan_help.boot.extend_bootinfo"
