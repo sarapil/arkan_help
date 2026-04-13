@@ -1,1 +1,316 @@
 source_text,translated_text,context
+Arkan Help,أركان مساعدة,App name
+Help,المساعدة,General
+Help System,نظام المساعدة,Module
+Help Center,مركز المساعدة,Page title
+Contextual Help,المساعدة السياقية,Feature
+Field Help,مساعدة الحقول,Feature
+About Arkan Help,عن أركان مساعدة,Page title
+Help Content,محتوى المساعدة,DocType
+Help Topic,موضوع المساعدة,DocType
+Help Context,سياق المساعدة,DocType
+Help Settings,إعدادات المساعدة,DocType
+Settings,الإعدادات,General
+Dashboard,لوحة التحكم,Page
+Help Dashboard,لوحة تحكم المساعدة,Page title
+Help Viewer,عارض المساعدة,Component
+Help Editor,محرر المساعدة,Component
+Help Author,مؤلف المساعدة,Role
+Help Manager,مدير المساعدة,Role
+Help Admin,مسؤول المساعدة,Role
+Create Help Content,إنشاء محتوى المساعدة,Action
+Edit Help Content,تعديل محتوى المساعدة,Action
+Delete Help Content,حذف محتوى المساعدة,Action
+Publish,نشر,Action
+Unpublish,إلغاء النشر,Action
+Published,منشور,Status
+Draft,مسودة,Status
+Archived,مؤرشف,Status
+Active,نشط,Status
+Title,العنوان,Field
+Content,المحتوى,Field
+Description,الوصف,Field
+DocType,نوع المستند,Field
+Field Name,اسم الحقل,Field
+Language,اللغة,Field
+Priority,الأولوية,Field
+Roles,الأدوار,Field
+Tags,الوسوم,Field
+Category,الفئة,Field
+Author,المؤلف,Field
+Created,تاريخ الإنشاء,Field
+Modified,تاريخ التعديل,Field
+View Count,عدد المشاهدات,Field
+Rating,التقييم,Field
+Helpful,مفيد,Feedback
+Not Helpful,غير مفيد,Feedback
+Report Issue,الإبلاغ عن مشكلة,Action
+Search Help,البحث في المساعدة,Action
+Search...,بحث...,Placeholder
+No results found,لم يتم العثور على نتائج,Message
+Loading...,جاري التحميل...,Message
+Error loading help,خطأ في تحميل المساعدة,Error
+Help not available,المساعدة غير متوفرة,Message
+Close,إغلاق,Action
+Back,رجوع,Action
+Next,التالي,Action
+Previous,السابق,Action
+Save,حفظ,Action
+Cancel,إلغاء,Action
+Submit,إرسال,Action
+Refresh,تحديث,Action
+Export,تصدير,Action
+Import,استيراد,Action
+Print,طباعة,Action
+Share,مشاركة,Action
+Copy Link,نسخ الرابط,Action
+Copied!,تم النسخ!,Message
+Getting Started,البداية السريعة,Section
+Quick Start,البداية السريعة,Section
+Overview,نظرة عامة,Section
+Features,الميزات,Section
+Tutorials,الدروس التعليمية,Section
+FAQ,الأسئلة الشائعة,Section
+Documentation,التوثيق,Section
+Support,الدعم,Section
+Contact Support,اتصل بالدعم,Action
+File-Based Help,المساعدة المعتمدة على الملفات,Feature
+Markdown-based help files organized per app,ملفات مساعدة Markdown منظمة حسب التطبيق,Description
+6-Level Resolution,الدقة من 6 مستويات,Feature
+Smart help lookup with intelligent fallback,بحث ذكي عن المساعدة مع احتياطي ذكي,Description
+Multi-Language,متعدد اللغات,Feature
+Full Arabic + English support with RTL,دعم كامل للعربية والإنجليزية مع RTL,Description
+Contextual Help System,نظام المساعدة السياقية,Title
+Navbar help icon,أيقونة المساعدة في الشريط,Feature
+Form toolbar help,مساعدة شريط أدوات النموذج,Feature
+Field-level tooltips,تلميحات على مستوى الحقل,Feature
+Built by,تطوير,Credit
+Powered by,بدعم من,Credit
+Frappe Framework,إطار عمل Frappe,Credit
+Help Analytics,تحليلات المساعدة,Feature
+View Analytics,عرض التحليلات,Action
+Total Topics,إجمالي المواضيع,KPI
+Total Views,إجمالي المشاهدات,KPI
+Helpful Rate,معدل الإفادة,KPI
+Active Authors,المؤلفون النشطون,KPI
+Today,اليوم,Time
+This Week,هذا الأسبوع,Time
+This Month,هذا الشهر,Time
+All Time,الكل,Time
+Filter by,تصفية حسب,Action
+Sort by,ترتيب حسب,Action
+Most Viewed,الأكثر مشاهدة,Sort
+Most Recent,الأحدث,Sort
+Most Helpful,الأكثر إفادة,Sort
+Alphabetical,أبجدي,Sort
+Manage Topics,إدارة المواضيع,Action
+Manage Content,إدارة المحتوى,Action
+Manage Translations,إدارة الترجمات,Action
+Add Topic,إضافة موضوع,Action
+Add Content,إضافة محتوى,Action
+Edit Topic,تعديل الموضوع,Action
+Delete Topic,حذف الموضوع,Action
+Are you sure?,هل أنت متأكد؟,Confirmation
+This action cannot be undone,لا يمكن التراجع عن هذا الإجراء,Warning
+Success,نجاح,Status
+Error,خطأ,Status
+Warning,تحذير,Status
+Info,معلومات,Status
+Help created successfully,تم إنشاء المساعدة بنجاح,Message
+Help updated successfully,تم تحديث المساعدة بنجاح,Message
+Help deleted successfully,تم حذف المساعدة بنجاح,Message
+Permission denied,تم رفض الإذن,Error
+You don't have permission to perform this action,ليس لديك صلاحية لتنفيذ هذا الإجراء,Error
+Session expired,انتهت الجلسة,Error
+Please login again,يرجى تسجيل الدخول مرة أخرى,Message
+Onboarding,الإعداد الأولي,Feature
+Welcome to Arkan Help,مرحباً بك في أركان مساعدة,Welcome
+Let's get started,هيا نبدأ,Welcome
+Step,خطوة,Wizard
+of,من,Wizard
+Complete,اكتمل,Status
+Skip,تخطي,Action
+Finish,إنهاء,Action
+Take Tour,جولة تعريفية,Action
+Show Tips,عرض النصائح,Action
+Hide Tips,إخفاء النصائح,Action
+Enable Contextual Help,تفعيل المساعدة السياقية,Setting
+Disable Contextual Help,تعطيل المساعدة السياقية,Setting
+Help Icon Position,موضع أيقونة المساعدة,Setting
+Left,يسار,Position
+Right,يمين,Position
+Top,أعلى,Position
+Bottom,أسفل,Position
+Auto,تلقائي,Position
+Theme,السمة,Setting
+Light,فاتح,Theme
+Dark,داكن,Theme
+System,النظام,Theme
+Compact View,عرض مضغوط,Setting
+Expanded View,عرض موسع,Setting
+Show Field Help Icons,عرض أيقونات مساعدة الحقول,Setting
+Show Navbar Help,عرض المساعدة في شريط التنقل,Setting
+Default Language,اللغة الافتراضية,Setting
+Fallback Language,اللغة الاحتياطية,Setting
+Arabic,العربية,Language
+English,الإنجليزية,Language
+French,الفرنسية,Language
+Turkish,التركية,Language
+Urdu,الأردية,Language
+No help content for this field,لا يوجد محتوى مساعدة لهذا الحقل,Message
+Click to edit,انقر للتعديل,Tooltip
+Drag to reorder,اسحب لإعادة الترتيب,Tooltip
+Double-click to expand,انقر مرتين للتوسيع,Tooltip
+Press Escape to close,اضغط Escape للإغلاق,Tooltip
+Keyboard Shortcuts,اختصارات لوحة المفاتيح,Feature
+Press ? for help,اضغط ? للمساعدة,Tooltip
+CAPS Capability,صلاحية CAPS,Permission
+AH_manage_topics,إدارة مواضيع المساعدة,Capability
+AH_manage_translations,إدارة ترجمات المساعدة,Capability
+AH_view_analytics,عرض تحليلات المساعدة,Capability
+AH_manage_settings,إدارة إعدادات المساعدة,Capability
+AH_author_content,تأليف محتوى المساعدة,Capability
+AH_approve_content,الموافقة على محتوى المساعدة,Capability
+Capability Required,صلاحية مطلوبة,Permission
+Access Denied,تم رفض الوصول,Error
+You need the following capability,تحتاج الصلاحية التالية,Message
+Bulk Actions,إجراءات جماعية,Feature
+Select All,تحديد الكل,Action
+Deselect All,إلغاء تحديد الكل,Action
+selected,محدد,Status
+items,عناصر,Count
+Delete Selected,حذف المحددة,Action
+Export Selected,تصدير المحددة,Action
+Publish Selected,نشر المحددة,Action
+Archive Selected,أرشفة المحددة,Action
+Help File,ملف المساعدة,DocType
+File Path,مسار الملف,Field
+Last Synced,آخر مزامنة,Field
+Sync Status,حالة المزامنة,Field
+Synced,متزامن,Status
+Pending Sync,في انتظار المزامنة,Status
+Sync Error,خطأ في المزامنة,Status
+Sync Now,مزامنة الآن,Action
+Sync All,مزامنة الكل,Action
+Auto Sync,مزامنة تلقائية,Setting
+Sync Interval,فترة المزامنة,Setting
+Every Hour,كل ساعة,Interval
+Every 6 Hours,كل 6 ساعات,Interval
+Daily,يومياً,Interval
+Weekly,أسبوعياً,Interval
+Cache,ذاكرة التخزين المؤقت,Feature
+Clear Cache,مسح ذاكرة التخزين المؤقت,Action
+Cache Cleared,تم مسح ذاكرة التخزين المؤقت,Message
+Performance,الأداء,Section
+Load Time,وقت التحميل,Metric
+Cache Hit Rate,معدل استخدام الذاكرة المؤقتة,Metric
+Resolution Time,وقت الدقة,Metric
+ms,مللي ثانية,Unit
+seconds,ثواني,Unit
+minutes,دقائق,Unit
+hours,ساعات,Unit
+Related Topics,مواضيع ذات صلة,Section
+See Also,انظر أيضاً,Section
+Was this helpful?,هل كان هذا مفيداً؟,Feedback
+Yes,نعم,Response
+No,لا,Response
+Thank you for your feedback,شكراً لملاحظاتك,Message
+Feedback submitted,تم إرسال الملاحظات,Message
+Report a Problem,الإبلاغ عن مشكلة,Action
+Suggest Improvement,اقتراح تحسين,Action
+Request New Topic,طلب موضوع جديد,Action
+Scene Dashboard,لوحة التحكم المرئية,Feature
+Help Center KPIs,مؤشرات مركز المساعدة,Section
+Content Coverage,تغطية المحتوى,KPI
+Translation Coverage,تغطية الترجمة,KPI
+User Satisfaction,رضا المستخدمين,KPI
+Active Help Topics,مواضيع المساعدة النشطة,KPI
+Pending Reviews,مراجعات معلقة,KPI
+Recent Activity,النشاط الأخير,Section
+Top Viewed Topics,أكثر المواضيع مشاهدة,Section
+Least Viewed Topics,أقل المواضيع مشاهدة,Section
+Topics Needing Update,مواضيع تحتاج تحديث,Section
+Missing Translations,ترجمات مفقودة,Section
+View All,عرض الكل,Action
+Collapse,طي,Action
+Expand,توسيع,Action
+Fullscreen,ملء الشاشة,Action
+Exit Fullscreen,الخروج من ملء الشاشة,Action
+Download,تحميل,Action
+Upload,رفع,Action
+Browse Files,تصفح الملفات,Action
+Drag and drop files here,اسحب وأفلت الملفات هنا,Message
+Supported formats,الصيغ المدعومة,Info
+Maximum file size,الحجم الأقصى للملف,Info
+MB,ميجابايت,Unit
+GB,جيجابايت,Unit
+Version History,سجل الإصدارات,Feature
+Revision,مراجعة,Field
+Compare Versions,مقارنة الإصدارات,Action
+Restore Version,استعادة الإصدار,Action
+Current Version,الإصدار الحالي,Label
+Previous Version,الإصدار السابق,Label
+Changes,التغييرات,Section
+Added,مضاف,Change
+Removed,محذوف,Change
+Modified,معدل,Change
+Preview,معاينة,Action
+Live Preview,معاينة مباشرة,Feature
+Edit Mode,وضع التحرير,Mode
+View Mode,وضع العرض,Mode
+Split View,عرض مقسم,Mode
+Markdown Editor,محرر Markdown,Feature
+Rich Text Editor,محرر نص منسق,Feature
+Code Editor,محرر الكود,Feature
+Insert Image,إدراج صورة,Action
+Insert Link,إدراج رابط,Action
+Insert Code Block,إدراج كتلة كود,Action
+Insert Table,إدراج جدول,Action
+Bold,عريض,Format
+Italic,مائل,Format
+Underline,تحته خط,Format
+Strikethrough,يتوسطه خط,Format
+Heading 1,عنوان 1,Format
+Heading 2,عنوان 2,Format
+Heading 3,عنوان 3,Format
+Bullet List,قائمة نقطية,Format
+Numbered List,قائمة مرقمة,Format
+Quote,اقتباس,Format
+Horizontal Rule,خط أفقي,Format
+Undo,تراجع,Action
+Redo,إعادة,Action
+Format,تنسيق,Menu
+Insert,إدراج,Menu
+Tools,أدوات,Menu
+Help Menu,قائمة المساعدة,Menu
+Validate Content,التحقق من المحتوى,Action
+Check Links,التحقق من الروابط,Action
+Check Spelling,التحقق من الإملاء,Action
+No spelling errors found,لم يتم العثور على أخطاء إملائية,Message
+spelling errors found,أخطاء إملائية,Count
+Broken links found,روابط معطلة,Count
+All links are valid,جميع الروابط صالحة,Message
+Word Count,عدد الكلمات,Metric
+Character Count,عدد الأحرف,Metric
+Reading Time,وقت القراءة,Metric
+Estimated reading time,وقت القراءة التقديري,Label
+min read,دقيقة قراءة,Unit
+words,كلمات,Unit
+characters,أحرف,Unit
+Template,قالب,Feature
+Use Template,استخدام قالب,Action
+Save as Template,حفظ كقالب,Action
+Blank,فارغ,Template
+Basic Topic,موضوع أساسي,Template
+FAQ Entry,إدخال أسئلة شائعة,Template
+Tutorial,درس تعليمي,Template
+Quick Tip,نصيحة سريعة,Template
+Reference Guide,دليل مرجعي,Template
+API Documentation,توثيق API,Template
+Workflow Guide,دليل سير العمل,Template
+Troubleshooting,استكشاف الأخطاء,Template
+Release Notes,ملاحظات الإصدار,Template
+Changelog,سجل التغييرات,Template
+Migration Guide,دليل الترحيل,Template
+Best Practices,أفضل الممارسات,Template
+Security Advisory,نصيحة أمنية,Template
