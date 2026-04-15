@@ -1,4 +1,5 @@
 # Help Content Form — Screen Specification
+
 # مواصفات شاشة نموذج محتوى المساعدة
 
 ## Screen Identity
@@ -68,13 +69,13 @@
 
 ## frappe_visual Components Used
 
-| Component | Usage | Configuration |
-|-----------|-------|---------------|
-| `CommandBar` | Quick actions ⌘K | Insert actions |
-| `Typewriter` | Title input effect | Placeholder animation |
-| `FloatingWindow` | Preview panel | Side-by-side view |
-| `ContextMenu` | Right-click editor | Formatting options |
-| `ShortcutManager` | ⌘B, ⌘I, etc. | Markdown shortcuts |
+| Component         | Usage              | Configuration         |
+| ----------------- | ------------------ | --------------------- |
+| `CommandBar`      | Quick actions ⌘K   | Insert actions        |
+| `Typewriter`      | Title input effect | Placeholder animation |
+| `FloatingWindow`  | Preview panel      | Side-by-side view     |
+| `ContextMenu`     | Right-click editor | Formatting options    |
+| `ShortcutManager` | ⌘B, ⌘I, etc.       | Markdown shortcuts    |
 
 ---
 
@@ -89,11 +90,11 @@
 
 ## Responsive Breakpoints
 
-| Breakpoint | Layout | Notes |
-|------------|--------|-------|
-| **Desktop** (>1024px) | Full editor with sidebars | Preview in floating window |
-| **Tablet** (768-1024px) | Full width editor | Preview in modal |
-| **Mobile** (<768px) | Simplified toolbar | Preview toggle |
+| Breakpoint              | Layout                    | Notes                      |
+| ----------------------- | ------------------------- | -------------------------- |
+| **Desktop** (>1024px)   | Full editor with sidebars | Preview in floating window |
+| **Tablet** (768-1024px) | Full width editor         | Preview in modal           |
+| **Mobile** (<768px)     | Simplified toolbar        | Preview toggle             |
 
 ---
 
@@ -133,10 +134,14 @@ frappe.ui.form.on("Help Content", {
 
     // Add Publish button for admins
     if (frappe.user.has_role("Help Admin") && frm.doc.status === "Draft") {
-      frm.add_custom_button(__("Publish"), () => {
-        frm.set_value("status", "Published");
-        frm.save();
-      }, __("Actions"));
+      frm.add_custom_button(
+        __("Publish"),
+        () => {
+          frm.set_value("status", "Published");
+          frm.save();
+        },
+        __("Actions"),
+      );
     }
   },
 
@@ -144,8 +149,10 @@ frappe.ui.form.on("Help Content", {
     // Live Markdown validation
     const errors = validateMarkdown(frm.doc.content);
     if (errors.length) {
-      frm.set_df_property("content", "description", 
-        `⚠️ ${errors.length} ${__("issues found")}`
+      frm.set_df_property(
+        "content",
+        "description",
+        `⚠️ ${errors.length} ${__("issues found")}`,
       );
     }
   },
@@ -156,26 +163,26 @@ frappe.ui.form.on("Help Content", {
 
 ## Validation Rules
 
-| Field | Rule | Error Message |
-|-------|------|---------------|
-| Title | Required, max 200 chars | "Title is required" |
-| DocType | Required, must exist | "Invalid DocType" |
-| Language | Required, valid code | "Select a language" |
-| Content | Required, valid Markdown | "Content required" |
-| Field Name | If set, must exist in DocType | "Field not found" |
+| Field      | Rule                          | Error Message       |
+| ---------- | ----------------------------- | ------------------- |
+| Title      | Required, max 200 chars       | "Title is required" |
+| DocType    | Required, must exist          | "Invalid DocType"   |
+| Language   | Required, valid code          | "Select a language" |
+| Content    | Required, valid Markdown      | "Content required"  |
+| Field Name | If set, must exist in DocType | "Field not found"   |
 
 ---
 
 ## Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘+S | Save |
-| ⌘+B | Bold |
-| ⌘+I | Italic |
-| ⌘+K | Insert link |
-| ⌘+Shift+P | Preview |
-| Escape | Close preview |
+| Shortcut  | Action        |
+| --------- | ------------- |
+| ⌘+S       | Save          |
+| ⌘+B       | Bold          |
+| ⌘+I       | Italic        |
+| ⌘+K       | Insert link   |
+| ⌘+Shift+P | Preview       |
+| Escape    | Close preview |
 
 ---
 

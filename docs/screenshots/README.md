@@ -1,9 +1,11 @@
 # Screenshots — Marketplace Assets
+
 # صور الشاشة — أصول المتجر
 
 ## Purpose
 
 This directory contains high-quality screenshots for:
+
 - Frappe Cloud Marketplace listing
 - Documentation illustrations
 - Marketing materials
@@ -13,13 +15,13 @@ This directory contains high-quality screenshots for:
 
 ### Technical Specifications
 
-| Attribute | Requirement |
-|-----------|-------------|
-| **Minimum Resolution** | 1280×800 pixels |
-| **Preferred Resolution** | 1920×1080 pixels |
-| **Format** | PNG (lossless) or WebP |
-| **Color Profile** | sRGB |
-| **Aspect Ratio** | 16:9 or 16:10 |
+| Attribute                | Requirement            |
+| ------------------------ | ---------------------- |
+| **Minimum Resolution**   | 1280×800 pixels        |
+| **Preferred Resolution** | 1920×1080 pixels       |
+| **Format**               | PNG (lossless) or WebP |
+| **Color Profile**        | sRGB                   |
+| **Aspect Ratio**         | 16:9 or 16:10          |
 
 ### Content Guidelines
 
@@ -35,41 +37,49 @@ This directory contains high-quality screenshots for:
 ## Required Screenshots (Minimum 5)
 
 ### 1. Dashboard Overview (`01-dashboard.png`)
+
 - **Content**: Help Center dashboard with KPIs and scene visualization
 - **Focus**: Scene dashboard with topic count, views, rating, authors
 - **State**: Data populated, charts active
 
 ### 2. Help Content Creation (`02-content-editor.png`)
+
 - **Content**: Help Content form in edit mode
 - **Focus**: Markdown editor with live preview
 - **State**: Content being edited, preview visible
 
 ### 3. Contextual Help (`03-field-help.png`)
+
 - **Content**: Form with field-level help tooltip open
 - **Focus**: ⓘ icon clicked, help popup visible
 - **State**: Tooltip showing relevant help text
 
 ### 4. Navbar Help Panel (`04-navbar-help.png`)
+
 - **Content**: Navbar with help panel open
 - **Focus**: Search, content display, related topics
 - **State**: Help content visible, search functional
 
 ### 5. Analytics & Coverage (`05-analytics.png`)
+
 - **Content**: Help analytics report or coverage view
 - **Focus**: Metrics, charts, coverage percentages
 - **State**: Data visualizations populated
 
 ### 6. Mobile Responsive (Optional) (`06-mobile.png`)
+
 - **Content**: Mobile view of help panel
 - **Focus**: BottomSheet behavior
 - **State**: Touch-friendly interface
 
 ### 7. Dark Mode (Optional) (`07-dark-mode.png`)
+
 - **Content**: Dashboard in dark mode
 - **Focus**: Theme consistency
 - **State**: Full dark mode active
 
 ### 8. RTL Arabic (Optional) (`08-rtl-arabic.png`)
+
 - **Content**: Dashboard with Arabic language
 - **Focus**: RTL layout, Arabic text
 - **State**: Proper mirroring and text direction
@@ -128,14 +138,14 @@ bench --site dev.localhost execute arkan_help.utils.screenshots.capture --args '
 
 ## Current Status
 
-| Screenshot | Status | Language | Dark Mode |
-|------------|--------|----------|-----------|
-| 01-dashboard.png | ⏳ Pending | EN | ❌ |
-| 01-dashboard-ar.png | ⏳ Pending | AR | ❌ |
-| 02-content-editor.png | ⏳ Pending | EN | ❌ |
-| 03-field-help.png | ⏳ Pending | EN | ❌ |
-| 04-navbar-help.png | ⏳ Pending | EN | ❌ |
-| 05-analytics.png | ⏳ Pending | EN | ❌ |
+| Screenshot            | Status     | Language | Dark Mode |
+| --------------------- | ---------- | -------- | --------- |
+| 01-dashboard.png      | ⏳ Pending | EN       | ❌        |
+| 01-dashboard-ar.png   | ⏳ Pending | AR       | ❌        |
+| 02-content-editor.png | ⏳ Pending | EN       | ❌        |
+| 03-field-help.png     | ⏳ Pending | EN       | ❌        |
+| 04-navbar-help.png    | ⏳ Pending | EN       | ❌        |
+| 05-analytics.png      | ⏳ Pending | EN       | ❌        |
 
 ---
 

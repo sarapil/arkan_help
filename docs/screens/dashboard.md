@@ -1,4 +1,5 @@
 # Help Dashboard — Screen Specification
+
 # مواصفات شاشة لوحة تحكم المساعدة
 
 ## Screen Identity
@@ -41,15 +42,15 @@
 
 ## frappe_visual Components Used
 
-| Component | Usage | Configuration |
-|-----------|-------|---------------|
+| Component           | Usage                  | Configuration                            |
+| ------------------- | ---------------------- | ---------------------------------------- |
 | `scenePresetOffice` | Header with KPI frames | 4 frames: topics, views, rating, authors |
-| `sceneDataBinder` | Live KPI data binding | 30s refresh interval |
-| `DataCard` | Statistic cards | CSS class: `.fv-fx-hover-lift` |
-| `VisualTreeView` | Topic hierarchy | Expandable tree |
-| `timeline` | Recent activity feed | Auto-scroll |
-| `Sparkline` | View trends | 7-day mini chart |
-| `BottomSheet` | Mobile actions | Slide-up on mobile |
+| `sceneDataBinder`   | Live KPI data binding  | 30s refresh interval                     |
+| `DataCard`          | Statistic cards        | CSS class: `.fv-fx-hover-lift`           |
+| `VisualTreeView`    | Topic hierarchy        | Expandable tree                          |
+| `timeline`          | Recent activity feed   | Auto-scroll                              |
+| `Sparkline`         | View trends            | 7-day mini chart                         |
+| `BottomSheet`       | Mobile actions         | Slide-up on mobile                       |
 
 ---
 
@@ -65,11 +66,11 @@
 
 ## Responsive Breakpoints
 
-| Breakpoint | Layout | Notes |
-|------------|--------|-------|
-| **Desktop** (>1024px) | 2-column grid below scene | Full scene dashboard |
-| **Tablet** (768-1024px) | Stacked cards | Scene simplified |
-| **Mobile** (<768px) | Single column, BottomSheet | Scene hidden, cards only |
+| Breakpoint              | Layout                     | Notes                    |
+| ----------------------- | -------------------------- | ------------------------ |
+| **Desktop** (>1024px)   | 2-column grid below scene  | Full scene dashboard     |
+| **Tablet** (768-1024px) | Stacked cards              | Scene simplified         |
+| **Mobile** (<768px)     | Single column, BottomSheet | Scene hidden, cards only |
 
 ---
 
@@ -86,6 +87,7 @@
 ## Dark Mode
 
 All colors via CSS variables:
+
 - `--ah-primary: #10B981`
 - `--ah-surface: var(--card-bg)`
 - `--ah-text: var(--text-color)`
@@ -97,7 +99,7 @@ All colors via CSS variables:
 
 ```javascript
 // Dashboard initialization
-frappe.pages["arkan-help"].on_page_load = async function(wrapper) {
+frappe.pages["arkan-help"].on_page_load = async function (wrapper) {
   const page = frappe.ui.make_app_page({
     parent: wrapper,
     title: __("Help Dashboard"),
@@ -157,21 +159,21 @@ frappe.pages["arkan-help"].on_page_load = async function(wrapper) {
 
 ### API Endpoints
 
-| Endpoint | Method | Purpose |
-|----------|--------|---------|
-| `arkan_help.api.v1.dashboard.get_stats` | GET | Dashboard KPIs |
-| `arkan_help.api.v1.dashboard.get_top_topics` | GET | Most viewed topics |
-| `arkan_help.api.v1.dashboard.get_activity` | GET | Recent activity |
-| `arkan_help.api.v1.dashboard.get_coverage` | GET | Coverage report |
+| Endpoint                                     | Method | Purpose            |
+| -------------------------------------------- | ------ | ------------------ |
+| `arkan_help.api.v1.dashboard.get_stats`      | GET    | Dashboard KPIs     |
+| `arkan_help.api.v1.dashboard.get_top_topics` | GET    | Most viewed topics |
+| `arkan_help.api.v1.dashboard.get_activity`   | GET    | Recent activity    |
+| `arkan_help.api.v1.dashboard.get_coverage`   | GET    | Coverage report    |
 
 ### KPIs
 
-| KPI | Source | Formula |
-|-----|--------|---------|
-| Total Topics | Help Content | `COUNT(status='Published')` |
-| Total Views | Help View Log | `SUM(view_count)` |
-| Helpful Rate | Help Feedback | `AVG(helpful=1) * 100` |
-| Active Authors | Help Content | `COUNT(DISTINCT owner)` |
+| KPI            | Source        | Formula                     |
+| -------------- | ------------- | --------------------------- |
+| Total Topics   | Help Content  | `COUNT(status='Published')` |
+| Total Views    | Help View Log | `SUM(view_count)`           |
+| Helpful Rate   | Help Feedback | `AVG(helpful=1) * 100`      |
+| Active Authors | Help Content  | `COUNT(DISTINCT owner)`     |
 
 ---
 

@@ -1,4 +1,5 @@
 # Help Author — Usage Scenarios
+
 # سيناريوهات استخدام مؤلف المساعدة
 
 ## Role Overview
@@ -29,7 +30,7 @@
   10. Verify: Draft is created with author attribution
 - **Screen**: [help-content-form.md](../screens/help-content-form.md)
 - **Breakpoints**: Works on [desktop ✅] [tablet ✅] [mobile ❌]
-- **Error scenarios**: 
+- **Error scenarios**:
   - Missing required fields → Validation error with field highlight
   - Duplicate content for same DocType+field+language → Warning prompt
 

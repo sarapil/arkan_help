@@ -20,31 +20,31 @@ Every screen MUST comply with:
 
 ## Screen Index
 
-| Screen | File | Primary Role | Serves Scenarios |
-|--------|------|--------------|------------------|
-| Help Dashboard | [dashboard.md](dashboard.md) | Admin, Author | WS-001 (Author), DS-001 (Admin) |
-| Help Content Form | [help-content-form.md](help-content-form.md) | Author | DS-001 to DS-004 (Author) |
-| Navbar Help Panel | [navbar-help-panel.md](navbar-help-panel.md) | User | DS-002, DS-003 (User) |
+| Screen            | File                                         | Primary Role  | Serves Scenarios                |
+| ----------------- | -------------------------------------------- | ------------- | ------------------------------- |
+| Help Dashboard    | [dashboard.md](dashboard.md)                 | Admin, Author | WS-001 (Author), DS-001 (Admin) |
+| Help Content Form | [help-content-form.md](help-content-form.md) | Author        | DS-001 to DS-004 (Author)       |
+| Navbar Help Panel | [navbar-help-panel.md](navbar-help-panel.md) | User          | DS-002, DS-003 (User)           |
 
 ---
 
 ## Visual Components by Screen
 
-| Screen | Components Used |
-|--------|-----------------|
-| Dashboard | `scenePresetLibrary`, `sceneDataBinder`, `DataCard`, `Sparkline`, `timeline` |
-| Help Content Form | `CommandBar`, `FloatingWindow`, `ContextMenu`, `ShortcutManager` |
-| Navbar Help Panel | `FloatingWindow`, `ContextPanel`, `Ripple`, `bilingualTooltip` |
+| Screen            | Components Used                                                              |
+| ----------------- | ---------------------------------------------------------------------------- |
+| Dashboard         | `scenePresetLibrary`, `sceneDataBinder`, `DataCard`, `Sparkline`, `timeline` |
+| Help Content Form | `CommandBar`, `FloatingWindow`, `ContextMenu`, `ShortcutManager`             |
+| Navbar Help Panel | `FloatingWindow`, `ContextPanel`, `Ripple`, `bilingualTooltip`               |
 
 ---
 
 ## CSS Effects by Screen
 
-| Screen | Effects |
-|--------|---------|
-| Dashboard | `.fv-fx-glass`, `.fv-fx-hover-lift`, `.fv-fx-page-enter`, `.fv-fx-gradient-animated` |
-| Help Content Form | `.fv-fx-glass`, `.fv-fx-page-enter`, `.fv-fx-hover-shine`, `.fv-fx-gradient-text` |
-| Navbar Help Panel | `.fv-fx-glass`, `.fv-fx-page-enter`, `.fv-fx-hover-lift`, `.fv-fx-ripple` |
+| Screen            | Effects                                                                              |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| Dashboard         | `.fv-fx-glass`, `.fv-fx-hover-lift`, `.fv-fx-page-enter`, `.fv-fx-gradient-animated` |
+| Help Content Form | `.fv-fx-glass`, `.fv-fx-page-enter`, `.fv-fx-hover-shine`, `.fv-fx-gradient-text`    |
+| Navbar Help Panel | `.fv-fx-glass`, `.fv-fx-page-enter`, `.fv-fx-hover-lift`, `.fv-fx-ripple`            |
 
 ---
 

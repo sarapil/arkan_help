@@ -1,4 +1,5 @@
 # Navbar Help Panel — Screen Specification
+
 # مواصفات شاشة لوحة المساعدة في شريط التنقل
 
 ## Screen Identity
@@ -46,13 +47,13 @@
 
 ## frappe_visual Components Used
 
-| Component | Usage | Configuration |
-|-----------|-------|---------------|
-| `FloatingWindow` | Panel container | position: sidebar-opposite |
-| `CommandBar` | Search ⌘K integration | help-specific actions |
-| `ContextPanel` | Content display | scrollable, resizable |
-| `Ripple` | Click feedback | button interactions |
-| `bilingualTooltip` | AR/EN hints | auto for all elements |
+| Component          | Usage                 | Configuration              |
+| ------------------ | --------------------- | -------------------------- |
+| `FloatingWindow`   | Panel container       | position: sidebar-opposite |
+| `CommandBar`       | Search ⌘K integration | help-specific actions      |
+| `ContextPanel`     | Content display       | scrollable, resizable      |
+| `Ripple`           | Click feedback        | button interactions        |
+| `bilingualTooltip` | AR/EN hints           | auto for all elements      |
 
 ---
 
@@ -67,11 +68,11 @@
 
 ## Responsive Breakpoints
 
-| Breakpoint | Behavior | Notes |
-|------------|----------|-------|
-| **Desktop** (>1024px) | Floating panel, 380px width | Opens opposite sidebar |
-| **Tablet** (768-1024px) | Floating panel, 340px width | Same behavior |
-| **Mobile** (<768px) | Full-width BottomSheet | Swipe down to close |
+| Breakpoint              | Behavior                    | Notes                  |
+| ----------------------- | --------------------------- | ---------------------- |
+| **Desktop** (>1024px)   | Floating panel, 380px width | Opens opposite sidebar |
+| **Tablet** (768-1024px) | Floating panel, 340px width | Same behavior          |
+| **Mobile** (<768px)     | Full-width BottomSheet      | Swipe down to close    |
 
 ---
 
@@ -122,14 +123,16 @@ class NavbarHelp {
       width: 380,
       cssClass: "navbar-help-panel fv-fx-glass fv-fx-page-enter",
       content: await this.getHelpContent(),
-      onClose: () => { this.panel = null; },
+      onClose: () => {
+        this.panel = null;
+      },
     });
   }
 
   async getHelpContent() {
     const route = frappe.get_route();
     const doctype = this.getDocTypeFromRoute(route);
-    
+
     const help = await frappe.call({
       method: "arkan_help.api.v1.help.get_help",
       args: { doctype, route: route.join("/") },
@@ -162,16 +165,20 @@ class NavbarHelp {
 
   renderRelated(related) {
     if (!related?.length) return "";
-    
+
     return `
       <div class="related-topics">
         <h5>${__("Related Topics")}</h5>
         <ul>
-          ${related.map(r => `
+          ${related
+            .map(
+              (r) => `
             <li>
               <a href="#" data-help="${r.name}">${r.title}</a>
             </li>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </ul>
       </div>
     `;
@@ -201,13 +208,13 @@ arkan_help.navbarHelp = new NavbarHelp();
 
 ## Search Behavior
 
-| Action | Behavior |
-|--------|----------|
+| Action         | Behavior                         |
+| -------------- | -------------------------------- |
 | Type in search | Debounced (300ms) instant search |
-| Enter key | Navigate to first result |
-| Arrow keys | Navigate results |
-| Escape | Clear search / Close panel |
-| Click result | Show help content |
+| Enter key      | Navigate to first result         |
+| Arrow keys     | Navigate results                 |
+| Escape         | Clear search / Close panel       |
+| Click result   | Show help content                |
 
 ---
 
@@ -274,9 +281,9 @@ gsap.to(".btn-feedback.clicked", {
 
 ## Error States
 
-| State | Display |
-|-------|---------|
-| Loading | Skeleton loader animation |
-| No content | "No help available" + request link |
-| Network error | Retry button + offline notice |
-| Offline | Show cached content if available |
+| State         | Display                            |
+| ------------- | ---------------------------------- |
+| Loading       | Skeleton loader animation          |
+| No content    | "No help available" + request link |
+| Network error | Retry button + offline notice      |
+| Offline       | Show cached content if available   |
